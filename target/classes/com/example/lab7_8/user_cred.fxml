@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab7_8.UserCredController">
+   <children>
+      <ListView fx:id="listKorisnici" onMouseClicked="#listaClicked" />
+      <GridPane prefHeight="400.0" prefWidth="327.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="115.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="179.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label ellipsisString="" text="Ime:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></Label>
+            <TextField id="imeLabel" GridPane.columnIndex="1" />
+            <Label text="Prezime:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="E-mail:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Korisničko ime:" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Lozinka:" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+             <TextField fx:id="imeLabel" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <TextField fx:id="prezimeLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="emailLabel" onAction="#dodajClicked" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="userLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <PasswordField fx:id="lozinkaLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ButtonBar prefHeight="68.0" prefWidth="209.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+              <buttons>
+                <Button id="dodajBtn" fx:id="dodajBtn" alignment="CENTER" mnemonicParsing="false" text="Dodaj" onAction="#dodajClicked"/>
+                  <Button id="krajBtn" fx:id="krajBtn" minWidth="65.0" mnemonicParsing="false" onAction="#krajClicked" prefHeight="26.0" text="Kraj" />
+              </buttons>
+            </ButtonBar>
+         </children>
+      </GridPane>
+   </children>
+</HBox>
